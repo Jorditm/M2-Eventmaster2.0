@@ -1,0 +1,400 @@
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+main {
+  padding-top: 60px;
+}
+header {
+  background-color: rgba(255, 255, 255, 0.15);
+}
+.container {
+  padding: 0;
+  font-family: "M PLUS 1p", sans-serif;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  align-content: center;
+  align-items: center;
+  margin-top: 10%;
+  background: rgb(185, 190, 201);
+  background: linear-gradient(0deg, rgba(225, 228, 235, 0.5) 0%, white 100%);
+}
+.login-signup {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 85px;
+}
+#subrallado-menú {
+  text-decoration-line: underline;
+}
+.container-fav img {
+  width: 40px;
+}
+.container-fav .btn {
+  color: white;
+  padding: 5px 15px;
+  border: none;
+  border-radius: 5px;
+  text-align: center;
+}
+.container-fav .btn:hover {
+  z-index: 1;
+  opacity: 40%;
+}
+.logo {
+  width: 200px;
+  display: block;
+  margin: auto;
+}
+h5 {
+  margin-top: 40px;
+  border: none;
+  font-size: 15px;
+  text-align: justify;
+  margin: 0px 10px 30px 10px;
+}
+.buscar,
+.correo,
+.contraseña,
+.nombre {
+  width: 240px;
+  text-align: center;
+  height: 35px;
+  margin: 15px 0;
+  border: none;
+  color: #001762;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  box-shadow: inset 0 1px 1px #00176252;
+  background: linear-gradient(to bottom, white, #d6defb);
+  border: 1px solid #4a5e9c80;
+}
+a {
+  font-size: 18px;
+  text-decoration: none;
+  color: #001762;
+}
+h2 {
+  font-size: 30px;
+}
+p {
+  font-size: 18px;
+  margin-top: 85px;
+  margin-bottom: 100px;
+}
+h3 {
+  font-size: 18px;
+  padding: 12px 15px;
+}
+h4 {
+  font-size: 15px;
+}
+img {
+  width: 100%;
+}
+.etiqueta,
+.etiqueta-search-event,
+.etiqueta-fav {
+  margin-bottom: 30px;
+}
+.etiqueta-random {
+  margin-bottom: 20px;
+  margin-top: 30px;
+  width: 300px;
+}
+.resultados-random {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+}
+.sugerencias {
+  text-align: center;
+  margin-top: 20px;
+}
+.url {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  text-align: center;
+  margin: 0px 90px;
+}
+.instagram {
+  background-image: url(/images/instagram.png);
+}
+.itunes {
+  background-image: url(/images/itunes.png);
+}
+.twitter {
+  background-image: url(/images/twitter.png);
+}
+.youtube {
+  background-image: url(/images/youtube.png);
+}
+.redes {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-around;
+  align-content: center;
+  align-items: flex-start;
+  margin-bottom: 20px;
+}
+.instagram,
+.itunes,
+.twitter,
+.youtube {
+  margin-top: 20px;
+  background-position: center;
+  background-size: cover;
+  height: 30px;
+  width: 30px;
+}
+.serch {
+  margin-top: 20px;
+  background-position: center;
+  background-size: cover;
+  height: 230px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#serch-event {
+  background-image: url(/images/defqon.jpg);
+}
+#serch-artist {
+  background-image: url(/images/BlackSabbath.jpg);
+  height: 260px;
+}
+#serch-lugar {
+  background-image: url(/images/Berghain.jpeg);
+}
+.texto,
+.texto-random,
+.texto-artista,
+.texto-search-artist,
+.texto-favorito {
+  background: linear-gradient(to bottom, rgb(255, 255, 255), #d8dbe6);
+  color: rgb(0, 0, 0);
+}
+.titulo-search-event,
+.titulo,
+.ciudad-pais,
+.calle,
+.fecha {
+  margin: 0px 10px;
+}
+.primary {
+  background: linear-gradient(to bottom, rgba(1, 129, 248, 0.624), #001762);
+  color: white;
+  border: #0ebceb;
+  cursor: pointer;
+  width: 100%;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+  margin-top: 15px;
+  margin-bottom: 25px;
+}
+.primary:hover {
+  opacity: 80%;
+}
+#login {
+  margin-top: 85px;
+}
+@media screen and (min-width: 376px) {
+  header {
+    background-color: rgba(255, 255, 255, 0.4);
+  }
+  .logo {
+    width: 27em;
+    height: 4em;
+    margin-top: 3vh;
+  }
+  .container {
+    margin-top: 5%;
+  }
+  .portada {
+    width: 80%;
+  }
+  .container {
+    max-width: 100%;
+  }
+  .serch,
+  #serch-artist {
+    height: 55vw;
+  }
+  .resultados,
+  .resultados-random,
+  .resultados-fav {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    align-items: center;
+  }
+  .imagen-random {
+    width: 100%;
+    height: 15vh;
+  }
+  .texto-random {
+    height: 260px;
+  }
+  .titulo,
+  .titulo-random {
+    height: 6vh;
+  }
+  .titulo-random h2 {
+    font-size: 22px;
+    margin-top: 1vh;
+  }
+  .etiqueta,
+  .etiqueta-search-event,
+  .etiqueta-fav {
+    margin-bottom: 3vh;
+    width: 40vw;
+  }
+  .titulo h2 {
+    font-size: 2.2vw;
+    margin-top: 1vh;
+  }
+  .texto {
+    height: 20.5vh;
+  }
+  .url a {
+    margin-bottom: 10px;
+    height: 35px;
+    font-size: 22px;
+    width: 70px;
+  }
+  .titulo-artista {
+    height: 7vh;
+    text-align: center;
+  }
+  .texto-artista {
+    height: 18vh;
+  }
+  .etiqueta img,
+  .etiqueta-fav img {
+    width: 100%;
+    height: 20vh;
+  }
+  .titulo-search-artist {
+    font-size: 4vh;
+    text-align: center;
+    height: 8vh;
+    margin-top: 1vh;
+  }
+  .texto-search-artist {
+    height: 16vh;
+  }
+  .texto-favorito {
+    height: 130px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .titulo-search-event h2 {
+    font-size: 20px;
+  }
+  html {
+    padding: 0;
+    margin: 0;
+  }
+  .etiqueta-search-event {
+    margin-bottom: 3vh;
+    width: 30%;
+  }
+  .texto-favorito {
+    height: 150px;
+    width: 100%;
+  }
+  .imagen-random {
+    height: 15vh;
+  }
+  .texto {
+    height: 24.5vh;
+  }
+  .titulo h2 {
+    font-size: 2.5vw;
+  }
+  .etiqueta-search-event > img {
+    height: 15vh;
+  }
+  .etiqueta-search-event .texto {
+    height: 240px;
+  }
+  h4 {
+    font-size: 15px;
+  }
+  .etiqueta-random > img {
+    height: 200px;
+  }
+  .texto-artista,
+  .texto-search-artist {
+    height: 200px;
+  }
+  .etiqueta img {
+    height: 22vh;
+  }
+  .resultados,
+  .resultados-random,
+  .resultados-fav {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    align-items: center;
+  }
+  .etiqueta-fav {
+    width: 30%;
+  }
+  .etiqueta-fav img {
+    height: 15vh;
+  }
+  .url a {
+    margin-bottom: 0px;
+  }
+  .redes {
+    margin-bottom: 10px;
+  }
+}
+@media screen and (min-width: 1000px) {
+  .corazon-sugestion {
+    margin-top: -65px;
+  }
+  .etiqueta,
+  .etiqueta-search-event,
+  .etiqueta-fav {
+    margin-bottom: 3vh;
+    width: 15%;
+  }
+  .titulo h2 {
+    font-size: 1.5vw;
+  }
+  .titulo-search-event h2 {
+    font-size: 1.5vw;
+    height: 6vh;
+  }
+  .ciudad-pais h4 {
+    font-size: 15px;
+    height: 25px;
+  }
+  .etiqueta-search-event .texto {
+    height: 35.5vh;
+  }
+  .titulo-artista {
+    height: 9vh;
+  }
+  .texto-favorito {
+    height: 130px;
+  }
+  .url a {
+    width: 70px;
+    margin-bottom: 25px;
+  }
+  .titulo-random {
+    height: 10vh;
+  }
+}

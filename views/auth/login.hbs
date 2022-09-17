@@ -1,0 +1,32 @@
+<div class="container">
+<h2> Iniciar Sesión </h2>
+
+{{#if errorMessage}}
+  <p class="error-message">
+    {{ errorMessage }}
+  </p>
+{{/if}}
+
+<form class="login-signup" action="/auth/login" method="post">
+  <div>
+    <input class="correo" type="email" name="email" id="email-input"
+      placeholder="CORREO">
+  </div>
+
+  <div>
+    <input class="contraseña" type="password" name="password" id="password-input"
+      placeholder="CONTRASEÑA">
+  </div>
+ 
+  <button id="login" class="primary"> <h3>Entrar </h3></button>
+ 
+</form>
+
+<p>
+  Aún no tienes una cuenta?
+  <a href="/auth/signup">
+    Regístrate
+  </a>
+</p>
+
+</div>

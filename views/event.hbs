@@ -1,0 +1,74 @@
+<header>
+    <div class="nav-wrapper">
+        <nav>
+            <input class="hidden" type="checkbox" id="menuToggle">
+            <label class="menu-btn" for="menuToggle">
+                <div class="menu"></div>
+                <div class="menu"></div>
+                <div class="menu"></div>
+            </label>
+            <div class="nav-container">
+                <ul class="nav-tabs">
+                    {{#if isUserLoggedIn}}
+                    <li class="nav-tab"><a href="/">Inicio</a></li>
+                    <li class="nav-tab"><a href="/favoritos">Favoritos</a></li>
+                    <li id="subrallado-menú" class="nav-tab"><a href="/event/event">Eventos</a></li>
+                    <li class="nav-tab"><a href="/event/attractions">Artistas</a></li>
+
+                    <li class="nav-tab"><a href="/auth/logout">Cerrar Sesión</a></li>
+                    {{else}}
+                    <li class="nav-tab"><a href="/auth/signup">Registrarse</a></li>
+                    <li class="nav-tab"><a href="/auth/login">Iniciar Sesión</a></li>
+                    {{/if}}
+                </ul>
+            </div>
+        </nav>
+    </div>
+</header>
+
+<main>
+    <img class="logo" src="/images/logo.jpg" alt="...">
+    <form id="serch-event" class="serch" action="/event/search-event">
+        <label for=""></label>
+        <input class="buscar" id="marco-buscar" type="text" placeholder="Busca un evento" name="search" id="" />
+    </form>
+
+    <h2 class="sugerencias">Sugerencias</h2>
+
+    <div class="resultados-random">
+        {{#each events}}
+        <div class="etiqueta-random">
+            <img class="imagen-random" src="{{this.images.6.url}}" alt="">
+            <div class="texto-random">
+                <div class="titulo-random">
+                    <h2> {{this.name}}</h2>
+                </div>
+                <div class="ciudad-pais-random">
+                    <h4> {{this._embedded.venues.0.city.name}}, {{this._embedded.venues.0.country.name}}</h4>
+                </div>
+                <div class="calle-random">
+                    <h4>{{this._embedded.venues.0.address.line1}}</h4>
+                </div>
+                <div class="fecha-random">
+                    <h4>{{this.dates.start.localDate}}</h4>
+                </div>
+                <div class="url">
+                    <a class="primary" href="{{this.url}}">Tickets</a>
+                </div>
+                <form action="/favoritos" method="POST">
+                    <div style="display: none">
+                        <input type="text" name="name" id="" value="{{this.name}}">
+                        <input type="text" name="url" id="" value="{{this.url}}">
+                        <input type="text" name="images" id="" value="{{this.images.6.url}}">
+                        <input type="text" name="localDate" id="" value="{{this.dates.start.localDate}}">
+                    </div>
+                    <div class="container-fav">
+                        <button class="btn"><img class="corazon-sugestion" src="/images/corazon.png"></button>
+                    </div>
+                </form>
+            </div>
+        </div>
+        {{/each}}
+
+    </div>
+</main>
