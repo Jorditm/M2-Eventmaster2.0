@@ -32,8 +32,8 @@ Buscador de eventos a nivel global y guardar los eventos favoritos en una lista 
 | `POST`     | `/auth/login`               | Envia información al servidor para verificar y entrar a la página de inicio | { email, password } |
 | `GET`      | `/auth/signup`              | Regístro                                                     |                     |
 | `POST`     | `/auth/signup`              | Envia información al servidor para registrar datos, verificarlos y renderizarnos a la página de inicio | { email, password } |
-| `GET`      | `/event/event`              | Trae información sobre eventos y tiene un buscador           |                     |
-| `POST`     | `/event/event`              | Busca la información del buscador y nos renderiza a resultados |                     |
+| `GET`      | `/event`              | Trae información sobre eventos y tiene un buscador           |                     |
+| `POST`     | `/event`              | Busca la información del buscador y nos renderiza a resultados |                     |
 | `GET`      | `/favoritos`                | Ruta privada que renderiza a favoritos                       |                     |
 | `GET`      | `/event/attractions`        | Trae información sobre artistas y tiene un buscador          |                     |
 | `POST`     | `/event/attractions`        | Busca la información del buscador y nos renderiza a resultados |                     |

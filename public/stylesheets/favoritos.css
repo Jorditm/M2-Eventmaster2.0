@@ -1,0 +1,31 @@
+.result-fav {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.card-fav {
+  width: 100%;
+}
+
+.no-favs {
+  padding: 55px 0;
+  font-size: 25px;
+  font-style: italic;
+  font-weight: 200;
+}
+
+.delete-btn button {
+  background: none;
+  border: none;
+  font-size: 25px;
+}
+
+.delete-btn img {
+  width: 30px;
+}
+.delete-btn img:hover {
+  transform: scale(1.2);
+  transition: transform 0.5s;
+}

@@ -19,7 +19,8 @@ router.post("/signup", (req, res, next) => {
 
   if (emailInput === "" || passwordInput === "") {
     res.render("auth/signup", {
-      errorMessage: "Ingrese el correo electrónico y la contraseña para iniciar sesión.",
+      errorMessage:
+        "Ingrese el correo electrónico y la contraseña para iniciar sesión.",
     });
     return;
   }
@@ -73,7 +74,8 @@ router.post("/login", (req, res, next) => {
 
   if (emailInput === "" || passwordInput === "") {
     res.render("auth/login", {
-      errorMessage: "Ingrese el correo electrónico y la contraseña para iniciar sesión.",
+      errorMessage:
+        "Ingrese el correo electrónico y la contraseña para iniciar sesión.",
     });
     return;
   }
@@ -98,20 +100,20 @@ router.post("/login", (req, res, next) => {
   });
 });
 
-router.get('/logout', (req, res, next) => {
-    if (!req.session.currentUser) {
-      res.redirect('/');
+router.get("/logout", (req, res, next) => {
+  if (!req.session.currentUser) {
+    res.redirect("/");
+    return;
+  }
+
+  req.session.destroy((err) => {
+    if (err) {
+      next(err);
       return;
     }
-  
-    req.session.destroy((err) => {
-      if (err) {
-        next(err);
-        return;
-      }
-  
-      res.redirect('/');
-    });
+
+    res.redirect("/");
   });
+});
 
 module.exports = router;

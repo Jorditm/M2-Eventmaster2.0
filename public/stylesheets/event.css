@@ -1,0 +1,150 @@
+#search-event {
+  background-image: url(/images/defqon.jpg);
+  background-position: center;
+  background-size: cover;
+  width: 100%;
+}
+
+#search-artist {
+  background-image: url(/images/BlackSabbath.jpg);
+  background-position: center;
+  background-size: cover;
+  width: 100%;
+}
+.search {
+  height: 230px;
+
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container-list {
+  width: 100%;
+  padding-top: 90px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.list {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+
+.suger-text {
+  font-size: 30px;
+  font-weight: 600;
+  text-align: center;
+  padding: 30px 0;
+}
+
+.space {
+  padding-top: 60px;
+}
+
+.card-container {
+  max-width: 90%;
+  max-height: 450px;
+  width: 300px;
+  margin: 15px auto;
+  border: 0.5px solid #b1b1b1;
+  border-radius: 5px;
+}
+.card-container:hover {
+  background-color: aliceblue;
+  transition: all 0.4s;
+}
+
+.img-card {
+  object-fit: cover;
+  width: 100%;
+  height: 150px;
+  margin-bottom: 10px;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+
+.text-card,
+.text-card-atraction {
+  padding: 5px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-around;
+}
+.text-card-atraction,
+.text-card {
+  min-height: 250px;
+}
+
+.title-card {
+  font-size: 24px;
+  font-weight: 600;
+  text-align: left;
+}
+
+.country-card p,
+.address-card p {
+  font-size: 16px;
+}
+
+.country-card p {
+  font-size: 16px;
+  font-style: italic;
+}
+
+.date-card {
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.url {
+  width: 95%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.ticket-btn {
+  padding: 5px;
+  background: rgba(173, 171, 227, 0.587);
+  color: black;
+  border-radius: 5px;
+  border: none;
+}
+
+.fav-btn button {
+  background: none;
+  border: none;
+}
+
+.fav-btn img {
+  width: 30px;
+}
+.fav-btn img:hover {
+  transform: scale(1.2);
+  transition: transform 0.5s;
+}
+
+
+
+.rrss {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.rrss a img {
+  width: 30px;
+}

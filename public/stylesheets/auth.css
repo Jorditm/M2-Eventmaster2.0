@@ -1,0 +1,92 @@
+.container-auth {
+  width: 100vw;
+  height: 100vh;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  align-content: center;
+  align-items: center;
+  justify-content: space-around;
+}
+.title p {
+  font-size: 30px;
+  font-weight: 500;
+  text-align: center;
+}
+
+.form-auth {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.column {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.buscar,
+.email,
+.pass,
+.name {
+  width: 250px;
+  text-align: center;
+  height: 35px;
+  margin: 15px 0;
+  color: #001762;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 7px;
+  border: 1px solid #4a5e9c80;
+  border-top: none;
+}
+
+.btn-auth {
+  background: linear-gradient(to bottom, rgba(1, 129, 248, 0.624), #001762);
+  color: white;
+  border: #0ebceb;
+  cursor: pointer;
+  width: 180px;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+  margin-top: 15px;
+  margin-bottom: 25px;
+}
+.btn-auth:hover {
+  opacity: 80%;
+}
+
+.btn-auth p {
+  font-size: 14px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+#login {
+  margin-top: 45px;
+}
+#login p {
+  font-size: 24px;
+}
+
+.redirect {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.error-message {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.error-message p {
+  text-align: center;
+  color: red;
+}

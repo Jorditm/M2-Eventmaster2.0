@@ -1,38 +1,50 @@
+<div class="container-auth">
+  <div class="title">
+    <p> Sign Up </p>
+  </div>
 
-<div class="container">
-<h2> Registrarte </h2>
+  {{#if errorMessage}}
+    <div class="error-message">
+      <p>
+        {{errorMessage}}
+      </p>
+    </div>
+  {{/if}}
 
-{{#if errorMessage}}
-<p class="error-message">
-    {{ errorMessage }}
-</p>
-{{/if}}
+  <form class="form-auth" action="/auth/signup" method="post">
+    <div class="column">
+      <label> Nombre</label>
+      <input class="name" type="text" name="name" placeholder="Master" />
+    </div>
 
-<form class="login-signup" action="/auth/signup" method="post">
-   
-    <div>
-        
-        <input class="nombre" type="text" name="name" id="name-input" placeholder="NOMBRE">
+    <div class="column">
+      <label>Email</label>
+      <input
+        class="email"
+        type="email"
+        name="email"
+        placeholder="eventmaster@eventmaster.com"
+      />
+    </div>
+
+    <div class="column">
+      <label>Contraseña</label>
+      <input class="pass" type="password" name="password" placeholder="****" />
     </div>
 
     <div>
-        
-        <input class="correo" type="email" name="email" id="email-input" placeholder="CORREO">
+      <button id="signup" class="btn-auth">
+        <p>Crear una nueva cuenta</p>
+      </button>
     </div>
+  </form>
 
-    <div>
-        
-        <input class="contraseña" type="password" name="password" id="password-input" placeholder="CONTRASEÑA">
-    </div>
-
-    <button class="primary"> <h3>Crear una nueva cuenta</h3> </button>
-
-</form>
-
-<p>
-    Ya tienes una cuenta?
-    <a href="/auth/login">
+  <div class="redirect">
+    <p>
+      Ya tienes una cuenta?
+      <a href="/auth/login">
         Iniciar sesión.
-    </a>
-</p>
+      </a>
+    </p>
+  </div>
 </div>

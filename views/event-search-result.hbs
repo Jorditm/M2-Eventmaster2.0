@@ -1,67 +1,85 @@
 <header>
-    <div class="nav-wrapper">
-        <nav>
-            <input class="hidden" type="checkbox" id="menuToggle">
-            <label class="menu-btn" for="menuToggle">
-                <div class="menu"></div>
-                <div class="menu"></div>
-                <div class="menu"></div>
-            </label>
-            <div class="nav-container">
-                <ul class="nav-tabs">
-                    {{#if isUserLoggedIn}}
-                    <li class="nav-tab"><a href="/">Inicio</a></li>
-                    <li class="nav-tab"><a href="/favoritos">Favoritos</a></li>
-                    <li id="subrallado-menú" class="nav-tab"><a href="/event/event">Eventos</a></li>
-                    <li class="nav-tab"><a href="/event/attractions">Artistas</a></li>
+  <div class="nav-wrapper">
+    <nav>
+      <div class="bg">
 
-                    <li class="nav-tab"><a href="/auth/logout">Cerrar Sesión</a></li>
-                    {{else}}
-                    <li class="nav-tab"><a href="/auth/signup">Registrarse</a></li>
-                    <li class="nav-tab"><a href="/auth/login">Iniciar Sesión</a></li>
-                    {{/if}}
-                </ul>
-            </div>
-        </nav>
-    </div>
+        <input class="hidden" type="checkbox" id="menuToggle" />
+        <label class="menu-btn" for="menuToggle">
+          <div class="menu"></div>
+          <div class="menu"></div>
+          <div class="menu"></div>
+        </label>
+        <div class="nav-container">
+          <ul class="nav-tabs">
+            {{#if isUserLoggedIn}}
+              <li id="subrallado-menú" class="nav-tab"><a
+                  href="/"
+                >Inicio</a></li>
+              <li class="nav-tab"><a href="/favoritos">Favoritos</a></li>
+              <li class="nav-tab"><a href="/event">Eventos</a></li>
+              <li class="nav-tab"><a href="/event/attractions">Artistas</a></li>
+
+              <li class="nav-tab"><a href="/auth/logout">Cerrar Sesión</a></li>
+            {{else}}
+              <li class="nav-tab"><a href="/auth/signup">Registrarse</a></li>
+              <li class="nav-tab"><a href="/auth/login">Iniciar Sesión</a></li>
+            {{/if}}
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </div>
 </header>
 <main>
-    <div class="resultados">
-        {{#each events}}
-        <div class="etiqueta-search-event">
-            <img src="{{this.images.6.url}}" alt="">
-            <div class="texto">
-                <div class="titulo-search-event">
-                    <h2> {{this.name}}</h2>
+  <div class="container-list space">
+    <div class="list">
+      {{#each events}}
+        <div class="card-container">
+          <img class="img-card" src="{{this.images.6.url}}" alt="" />
+          <div class="text-card">
+            <div class="title-card">
+              <p> {{this.name}}</p>
+            </div>
+            <div class="country-card">
+              <p>
+                {{this._embedded.venues.0.city.name}},
+                {{this._embedded.venues.0.country.name}}</p>
+            </div>
+            <div class="address-card">
+              <p>{{this._embedded.venues.0.address.line1}}</p>
+            </div>
+            <div class="date-card">
+              <p>{{this.dates.start.localDate}}</p>
+            </div>
+            <div class="url">
+              <a class="ticket-btn" href="{{this.url}}">Tickets</a>
+              <form action="/favoritos" method="POST">
+                <div style="display: none">
+                  <input type="text" name="name" id="" value="{{this.name}}" />
+                  <input type="text" name="url" id="" value="{{this.url}}" />
+                  <input
+                    type="text"
+                    name="images"
+                    id=""
+                    value="{{this.images.6.url}}"
+                  />
+                  <input
+                    type="text"
+                    name="localDate"
+                    id=""
+                    value="{{this.dates.start.localDate}}"
+                  />
                 </div>
-                <div class="ciudad-pais">
-                    <h4> {{this._embedded.venues.0.city.name}}, {{this._embedded.venues.0.country.name}}</h4>
+                <div class="fav-btn">
+                  <button>
+                    <img src="/images/heart-void.png" /></button>
                 </div>
-                <div class="calle">
-                    <h4>{{this._embedded.venues.0.address.line1}}</h4>
-                </div>
-                <div class="fecha">
-                    <h4>{{this.dates.start.localDate}}</h4>
-                </div>
-                <div class="url">
-                    <a class="primary" href="{{this.url}}">Tickets</a>
-                </div>
-                <form action="/favoritos" method="POST">
-                    <div style="display: none">
-                        <input type="text" name="name" id="" value="{{this.name}}">
-                        <input type="text" name="url" id="" value="{{this.url}}">
-                        <input type="text" name="images" id="" value="{{this.images.6.url}}">
-                        <input type="text" name="localDate" id="" value="{{this.dates.start.localDate}}">
-                    </div>
-
-                    <div class="container-fav">
-                        <button class="btn"><img class="corazon"src="/images/corazon.png"></button>
-                    </div>
-
-                </form>
+              </form>
             </div>
 
+          </div>
         </div>
-        {{/each}}
+      {{/each}}
+
     </div>
-</main>
+  </div></main>
