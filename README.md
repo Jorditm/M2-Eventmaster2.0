@@ -83,7 +83,3 @@ Favorito
 
 [Slides Link](https://docs.google.com/presentation/d/11Ub6-EmOCntwMMepgcJw71aIf-Iduj9wgLGRWNK6QRo/edit?usp=sharing )
 
-## Heroku
-
-[Web EventMaster](https://eventmasterr.herokuapp.com/)
-
